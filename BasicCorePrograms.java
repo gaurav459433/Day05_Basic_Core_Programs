@@ -4,24 +4,26 @@ import java.util.Scanner;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Dividend Value:");
-        int dividend = sc.nextInt();
-        System.out.println("Enter The Divisor Value");
-        int divisor = sc.nextInt();
+        System.out.println("Enter the First Number: ");
+        int number1 = sc.nextInt();
+        System.out.println("Enter the Second Number: ");
+        int number2 = sc.nextInt();
+        int number = 0;
+        beforeSwap(number1, number2);
 
-        QuotientAndRemainder(dividend, divisor);
+        afterSwap(number1, number2, number);
     }
 
-    //Program For Quotient & Remainder
-    public static void QuotientAndRemainder(int dividend, int divisor) {
-        int quotient;
-        int remainder;
-        quotient = dividend / divisor;
-        remainder = dividend % divisor;
+    //Program For Swap Two Numbers
+    public static void beforeSwap(int number1, int number2) {
+        System.out.println("Before Swapping: " + number1 + " " + number2 + " ");
+    }
 
-        System.out.println("Quotient is: " + quotient);
-        System.out.println("Remainder is: " + remainder);
+    public static void afterSwap(int number1, int number2, int number) {
+        number = number1;
+        number1 = number2;
+        number2 = number;
+        System.out.println("After Swapping: " + number1 + " " + number2 + " ");
     }
 }
