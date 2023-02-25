@@ -6,19 +6,21 @@ public class BasicCorePrograms {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Number :");
-        int harmonic = sc.nextInt();
+        System.out.println("Enter The Number To Find Its Factor:");
+        int num = sc.nextInt();
         double sum = 0;
 
-        harmonicNumber(harmonic, sum);
+        primeFactorization(num);
     }
 
-    //Program For Harmonic Number
-    public static void harmonicNumber(int harmonic, double sum) {
-        for (int i = 1; i <= harmonic; i++) {
-            System.out.println("1/" + i + "+");
-            sum += (double) 1 / i; // sum for number
+    //Program For Prime Factorization
+    public static void primeFactorization(int num) {
+        for (int i = 2; i <= num; i++) {    //prime factors start by 2
+            while (num % i == 0) {   //the number should be complete divisible by "i" number
+                System.out.println(i);
+                num = num / i; // till divisible it is divides
+            }
         }
-        System.out.println("Sum of Harmonic Numbers is: " + sum);
+
     }
 }
