@@ -4,24 +4,21 @@ import java.util.Scanner;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Power For 2 :");
-        int n = sc.nextInt();
-        int power = 1;
-        powerOf2(n, power);
+        System.out.println("Enter The Number :");
+        int harmonic = sc.nextInt();
+        double sum = 0;
+
+        harmonicNumber(harmonic, sum);
     }
 
-    //Program For Power Of 2
-    public static void powerOf2(int n, int power) {
-        int i = 0;
-        if (0 <= n && n < 31) {  //input number should be less than 31 & greater than 0
-            while (i < n) {
-                power *= 2;  //for power of 2
-                i++;
-            }
+    //Program For Harmonic Number
+    public static void harmonicNumber(int harmonic, double sum) {
+        for (int i = 1; i <= harmonic; i++) {
+            System.out.println("1/" + i + "+");
+            sum += (double) 1 / i; // sum for number
         }
-        System.out.println("2^" + n + " is = " + " " + power);
-
+        System.out.println("Sum of Harmonic Numbers is: " + sum);
     }
-
 }
