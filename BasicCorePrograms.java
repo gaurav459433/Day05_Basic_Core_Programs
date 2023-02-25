@@ -6,21 +6,22 @@ public class BasicCorePrograms {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Number To Find Its Factor:");
-        int num = sc.nextInt();
-        double sum = 0;
+        System.out.println("Enter The Dividend Value:");
+        int dividend = sc.nextInt();
+        System.out.println("Enter The Divisor Value");
+        int divisor = sc.nextInt();
 
-        primeFactorization(num);
+        QuotientAndRemainder(dividend, divisor);
     }
 
-    //Program For Prime Factorization
-    public static void primeFactorization(int num) {
-        for (int i = 2; i <= num; i++) {    //prime factors start by 2
-            while (num % i == 0) {   //the number should be complete divisible by "i" number
-                System.out.println(i);
-                num = num / i; // till divisible it is divides
-            }
-        }
+    //Program For Quotient & Remainder
+    public static void QuotientAndRemainder(int dividend, int divisor) {
+        int quotient;
+        int remainder;
+        quotient = dividend / divisor;
+        remainder = dividend % divisor;
 
+        System.out.println("Quotient is: " + quotient);
+        System.out.println("Remainder is: " + remainder);
     }
 }
